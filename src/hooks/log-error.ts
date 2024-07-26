@@ -8,7 +8,7 @@ export const logError = async (context: HookContext, next: NextFunction) => {
     await next()
     console.log("Nhlanhla end error hook 1");
   } catch (error: any) {
-    console.log("Nhlanhla catch error hook 1");
+    console.log("Nhlanhla catch error hook 1..");
     logger.error(error.stack)
 
     // Log validation errors
