@@ -1,0 +1,40 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "./public/",
+  "origins": [
+    "http://localhost:3030"
+  ],
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb+srv://mbmkhize22:JBt0cEjXbfISGqqW@zamambotelecomscluster0.mfphwhi.mongodb.net/?retryWrites=true&w=majority&appName=ZamamboTelecomsCluster0/zt-1st-api-db",
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "Lz9MREJ8hg7EQQk/bBfAa7ljkwsfui95",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "google": {
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
+      }
+    }
+  }
+}
